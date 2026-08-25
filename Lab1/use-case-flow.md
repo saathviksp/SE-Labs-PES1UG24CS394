@@ -19,7 +19,7 @@
 ## Postconditions
 1. The ride booking status is updated to **"Confirmed"** in the system repository.
 2. The available seat count for the Driver Host's scheduled trip is decremented by one.
-3. An **estimated** fuel cost share split is computed and attached to the pending booking request (with final itemized settlement calculated upon ride completion per `FR-002`).
+3. An **estimated** fuel cost share split is computed and attached to the pending booking request (with the final itemized fuel-cost share generated upon completion of the shared ride per `FR-002`).
 4. Real-time booking confirmations and itinerary notifications are dispatched to both the Rider Commuter and Driver Host.
 
 ---
@@ -27,7 +27,7 @@
 ## Main Success Scenario
 1. **Search Carpool Rides:** The Rider Commuter initiates a search for carpool matches by providing their daily pickup/dropoff locations and departure time window.
 2. **Calculate Route Compatibility (`<<include>>` UC-007):** The system automatically evaluates candidate Driver Host routes against the Rider Commuter's path to determine if the added detour distance is within the mandatory **1.5 km detour tolerance threshold** (`FR-001`).
-3. **Calculate Estimated Fuel Cost Share (`<<include>>` UC-011):** For compatible routes, the system calculates the **estimated** fuel cost share split based on trip distance, vehicle fuel efficiency, and current fuel rates (`FR-002`). *Note: The final itemized cost split bill is generated upon completion of the shared ride.*
+3. **Calculate Fuel Cost Share (`<<include>>` UC-011):** Calculate the estimated fuel cost share for the compatible route based on estimated trip distance, vehicle fuel efficiency, and current fuel prices. This estimate is displayed to the Rider Commuter during the ride-request process. *(Note: Per requirement `FR-002`, the final itemized fuel-cost share is generated upon completion of the shared ride).*
 4. **Display Matches:** The system displays a sorted list of compatible carpool matches showing driver ratings, estimated pickup time, added detour distance, and estimated fuel cost share.
 5. **Submit Request:** The Rider Commuter selects a preferred Driver Host route and submits a seat request.
 6. **Set Pending State:** The system places the seat in a temporary hold state ("Pending Approval") and sends an instant booking notification to the Driver Host (`FR-005`).
