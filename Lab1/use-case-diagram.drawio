@@ -29,10 +29,10 @@
         <mxCell id="uc_search" value="UC-06: Search for Carpool Matches" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E8F0FE;strokeColor=#1A73E8" vertex="1" parent="sys_boundary">
           <mxGeometry x="40" y="350" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uc_view_matches" value="UC-08: View Matched Rides" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E8F0FE;strokeColor=#1A73E8" vertex="1" parent="sys_boundary">
+        <mxCell id="uc_view_matches" value="UC-10: View Matched Rides" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E8F0FE;strokeColor=#1A73E8" vertex="1" parent="sys_boundary">
           <mxGeometry x="40" y="460" width="210" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uc_request_ride" value="UC-09: Request a Ride" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E8F0FE;strokeColor=#1A73E8" vertex="1" parent="sys_boundary">
+        <mxCell id="uc_request_ride" value="UC-08: Request a Ride" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E8F0FE;strokeColor=#1A73E8" vertex="1" parent="sys_boundary">
           <mxGeometry x="40" y="570" width="210" height="55" as="geometry" />
         </mxCell>
         <mxCell id="uc_manage_bookings" value="UC-12: View / Manage Bookings" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#F1F3F4;strokeColor=#5F6368" vertex="1" parent="sys_boundary">
@@ -50,10 +50,10 @@
         <mxCell id="uc_calc_compat" value="UC-07: Calculate Route Compatibility" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#FEF7E0;strokeColor=#F9AB00" vertex="1" parent="sys_boundary">
           <mxGeometry x="360" y="350" width="240" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uc_calc_cost" value="UC-11: Calculate Fuel Cost Share" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#FEF7E0;strokeColor=#F9AB00" vertex="1" parent="sys_boundary">
+        <mxCell id="uc_calc_cost" value="UC-09: Calculate Fuel Cost Share" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#FEF7E0;strokeColor=#F9AB00" vertex="1" parent="sys_boundary">
           <mxGeometry x="370" y="570" width="230" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uc_approve_ride" value="UC-10: Approve / Reject Ride Request" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E6F4EA;strokeColor=#137333" vertex="1" parent="sys_boundary">
+        <mxCell id="uc_approve_ride" value="UC-11: Approve / Reject Ride Request" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#202124;;fillColor=#E6F4EA;strokeColor=#137333" vertex="1" parent="sys_boundary">
           <mxGeometry x="700" y="570" width="230" height="55" as="geometry" />
         </mxCell>
         <mxCell id="e_r1" value="" style="endArrow=none;html=1;strokeColor=#5F6368;strokeWidth=1.5;" edge="1" parent="1" source="actor_rider" target="uc_login">

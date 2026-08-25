@@ -30,16 +30,21 @@
 | **UC-05** | Set Daily Schedule | Rider Commuter, Driver Host | Configure recurring daily departure time windows. |
 | **UC-06** | Search Carpool Matches | Rider Commuter | Search for drivers with overlapping commute routes. |
 | **UC-07** | Calc Route Compatibility | Map & Route Service, System | Compute route overlap enforcing the 1.5 km detour threshold. |
-| **UC-08** | View Matched Rides | Rider Commuter | Display sorted list of compatible carpool matches. |
-| **UC-09** | Request a Ride | Rider Commuter | Send seat reservation request to a driver host. |
-| **UC-10** | Approve / Reject Request | Driver Host | Review incoming passenger requests and accept/decline. |
-| **UC-11** | Calc Fuel Cost Share | System | Compute proportional cost share split per passenger. |
+| **UC-08** | Request a Ride | Rider Commuter | Send seat reservation request to a driver host. |
+| **UC-09** | Calc Fuel Cost Share | System | Compute proportional cost share split per passenger. |
+| **UC-10** | View Matched Rides | Rider Commuter | Display sorted list of compatible carpool matches. |
+| **UC-11** | Approve / Reject Request | Driver Host | Review incoming passenger requests and accept/decline. |
 | **UC-12** | View / Manage Bookings | Rider Commuter, Driver Host | Track active, upcoming, and completed ride bookings. |
 | **UC-13** | Rate Ride / User | Rider Commuter, Driver Host | Submit rating and performance feedback post-trip. |
 
 ---
 
 ### 3. UML Relationship Specification
+
+#### Actor-to-Use-Case Association Mapping
+* **Rider Commuter (Primary Actor):** Associated with `UC-01`, `UC-04`, `UC-05`, `UC-06`, `UC-08` (*Request a Ride*), `UC-10` (*View Matched Rides*), `UC-12`, `UC-13`.
+* **Driver Host (Primary Actor):** Associated with `UC-01`, `UC-02`, `UC-04`, `UC-05`, `UC-11` (*Approve / Reject Request*), `UC-12`, `UC-13`. *(Note: UC-11 is directly connected to Driver Host for decision authorization; it is NOT connected to Map & Route Service).*
+* **Map & Route Service (External Supporting System Actor):** Associated ONLY with `UC-07` (*Calc Route Compatibility*) to evaluate geographical detour distance.
 
 #### `<<include>>` Relationships (Points FROM Base Use Case TO Included Use Case)
 1. **`UC-02: Create Driver Profile` $\xrightarrow{<<include>>}$ `UC-03: Verify Driver / Vehicle`**
@@ -52,9 +57,9 @@
    * *Included Use Case:* `UC-07: Calc Route Compatibility`
    * *Rationale:* Searching for carpool matches automatically triggers the route compatibility calculation.
 
-3. **`UC-09: Request a Ride` $\xrightarrow{<<include>>}$ `UC-11: Calc Fuel Cost Share`**
-   * *Base Use Case:* `UC-09: Request a Ride`
-   * *Included Use Case:* `UC-11: Calc Fuel Cost Share`
+3. **`UC-08: Request a Ride` $\xrightarrow{<<include>>}$ `UC-09: Calc Fuel Cost Share`**
+   * *Base Use Case:* `UC-08: Request a Ride`
+   * *Included Use Case:* `UC-09: Calc Fuel Cost Share`
    * *Rationale:* Requesting a ride automatically calculates the estimated fuel cost split.
 
 ---

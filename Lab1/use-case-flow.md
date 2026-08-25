@@ -1,7 +1,7 @@
 # Use-Case Flow Specification: Request a Ride
 
 ## Use Case Information
-- **Use Case ID:** UC-009
+- **Use Case ID:** UC-08
 - **Use Case Name:** Request a Ride
 - **Primary Actor:** Rider Commuter
 - **Supporting Actor:** Driver Host
@@ -25,13 +25,13 @@
 ---
 
 ## Main Success Scenario
-1. **Search Carpool Rides:** The Rider Commuter initiates a search for carpool matches by providing their daily pickup/dropoff locations and departure time window.
-2. **Calculate Route Compatibility (`<<include>>` UC-007):** The system automatically evaluates candidate Driver Host routes against the Rider Commuter's path to determine if the added detour distance is within the mandatory **1.5 km detour tolerance threshold** (`FR-001`).
-3. **Calculate Fuel Cost Share (`<<include>>` UC-011):** Calculate the estimated fuel cost share for the compatible route based on estimated trip distance, vehicle fuel efficiency, and current fuel prices. This estimate is displayed to the Rider Commuter during the ride-request process. *(Note: Per requirement `FR-002`, the final itemized fuel-cost share is generated upon completion of the shared ride).*
-4. **Display Matches:** The system displays a sorted list of compatible carpool matches showing driver ratings, estimated pickup time, added detour distance, and estimated fuel cost share.
-5. **Submit Request:** The Rider Commuter selects a preferred Driver Host route and submits a seat request.
+1. **Search Carpool Rides:** The Rider Commuter initiates a search for carpool matches by providing their daily pickup/dropoff locations and departure time window (`UC-06`).
+2. **Calculate Route Compatibility (`<<include>>` UC-07):** The system automatically evaluates candidate Driver Host routes against the Rider Commuter's path to determine if the added detour distance is within the mandatory **1.5 km detour tolerance threshold** (`FR-001`).
+3. **Calculate Fuel Cost Share (`<<include>>` UC-09):** Calculate the estimated fuel cost share for the compatible route based on estimated trip distance, vehicle fuel efficiency, and current fuel prices. This estimate is displayed to the Rider Commuter during the ride-request process. *(Note: Per requirement `FR-002`, the final itemized fuel-cost share is generated upon completion of the shared ride).*
+4. **Display Matches:** The system displays a sorted list of compatible carpool matches showing driver ratings, estimated pickup time, added detour distance, and estimated fuel cost share (`UC-10`).
+5. **Submit Request:** The Rider Commuter selects a preferred Driver Host route and submits a seat request (`UC-08`).
 6. **Set Pending State:** The system places the seat in a temporary hold state ("Pending Approval") and sends an instant booking notification to the Driver Host (`FR-005`).
-7. **Driver Approval:** The Driver Host reviews the passenger profile, pickup point, and detour metric, and accepts the ride request within the 30-minute response window.
+7. **Driver Approval:** The Driver Host reviews the passenger profile, pickup point, and detour metric, and accepts the ride request (`UC-11: Approve / Reject Ride Request`) within the 30-minute response window.
 8. **Confirm Booking:** The system updates the booking status to **"Confirmed"**, updates vehicle seat availability, and sends final itinerary details to both actors.
 
 ---
