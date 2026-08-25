@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mxfile host="Electron" modified="2026-08-25T11:15:00.000Z" agent="Antigravity AI" version="21.0.0" type="device">
+<mxfile host="Electron" modified="2026-08-25T11:20:00.000Z" agent="Antigravity AI" version="21.0.0" type="device">
   <diagram id="p2p-carpool-usecase" name="Peer-to-Peer Carpooling Use Case Diagram">
     <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="sys_boundary" value="Peer-to-Peer Carpooling &amp;amp; Expense Splitter" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=35;horizontal=1;horizontalStack=0;fillColor=#F8F9FA;strokeColor=#3C4043;strokeWidth=2;fontColor=#1A73E8;fontStyle=1;fontSize=16;swimlaneFillColor=#FFFFFF;rounded=1;arcSize=3;" vertex="1" parent="1">
-          <mxGeometry x="210" y="40" width="960" height="880" as="geometry" />
+          <mxGeometry x="210" y="40" width="980" height="880" as="geometry" />
         </mxCell>
         <mxCell id="actor_rider" value="Rider Commuter" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#E8F0FE;strokeColor=#1A73E8;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#1A73E8;" vertex="1" parent="1">
           <mxGeometry x="50" y="430" width="80" height="120" as="geometry" />
@@ -104,16 +104,16 @@
         <mxCell id="e_map1" value="" style="endArrow=none;html=1;strokeColor=#5F6368;strokeWidth=1.5;" edge="1" parent="1" source="actor_map" target="uc_calc_compat">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="inc_1" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#D93025;strokeWidth=1.5;fontColor=#D93025;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_driver_profile" target="uc_verify_driver">
+        <mxCell id="inc_1" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#D93025;strokeWidth=2;fontColor=#D93025;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_driver_profile" target="uc_verify_driver">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="inc_2" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#D93025;strokeWidth=1.5;fontColor=#D93025;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_search" target="uc_calc_compat">
+        <mxCell id="inc_2" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#D93025;strokeWidth=2;fontColor=#D93025;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_search" target="uc_calc_compat">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="inc_3" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#D93025;strokeWidth=1.5;fontColor=#D93025;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_request_ride" target="uc_calc_cost">
+        <mxCell id="inc_3" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#D93025;strokeWidth=2;fontColor=#D93025;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_request_ride" target="uc_calc_cost">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ext_1" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#1A73E8;strokeWidth=1.5;fontColor=#1A73E8;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_rate" target="uc_manage_bookings">
+        <mxCell id="ext_1" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=8;dashed=1;html=1;strokeColor=#1A73E8;strokeWidth=2;fontColor=#1A73E8;fontSize=11;fontStyle=1;" edge="1" parent="1" source="uc_rate" target="uc_manage_bookings">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
